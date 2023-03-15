@@ -29,6 +29,7 @@ createApp({
         text: '',
         done: false,
       },
+      title: 'Todo List',
     }
   }, 
 

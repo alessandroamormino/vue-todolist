@@ -6,20 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue - To do </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <div id="app">
-        <ul>
-            <li v-for="(todo, index) in todos">
-                <span @click="isDone(index)" :style="todos[index].done ? styleToDo : {}">{{todo.text}}</span>
-                 - 
-                <span @click="removeToDo(index)"><i class="fa-solid fa-trash-can"></i></span>
-            </li>
-        </ul>
-        <div id="add-todo">
-            <input type="text" v-model="newToDo.text" @keyup.enter="addToDo()">
-            <button @click="addToDo()">Add</button>
+        <div class="list-container">
+            <h1 :style="{color: '#2DC9F8'}">{{title}}</h1>
+            <div class="card">
+                <ul>
+                    <li v-for="(todo, index) in todos">
+                        <span @click="isDone(index)" :style="todos[index].done ? styleToDo : {}">{{todo.text}}</span> 
+                        <span class="delete" @click="removeToDo(index)"><i class="fa-solid fa-trash-can"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div id="add-todo">
+                <input type="text" v-model="newToDo.text" @keyup.enter="addToDo()">
+                <button @click="addToDo()" class="btn">Add</button>
+            </div>
         </div>
     </div>
 
