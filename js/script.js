@@ -35,6 +35,10 @@ createApp({
         } else{
             this.todos[toDoIndex].done = true;
         }
+    },
+
+    removeToDo(toDoIndex){
+        this.todos.splice(toDoIndex, 1);
     }
   },
 
