@@ -9,7 +9,13 @@
 <body>
 
     <div id="app">
-        
+        <ul>
+            <li v-for="(todo, index) in todos">
+                <span @click="isDone(index)" :style="todos[index].done ? styleToDo : {}">{{todo.text}}</span>
+                 - 
+                <span>X</span>
+            </li>
+        </ul>
     </div>
 
     <!-- script -->
