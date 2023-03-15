@@ -25,7 +25,7 @@ body{
     background-color: #fff;
     border-radius: 10px;
 
-    padding: 1em 2em;
+    padding: 2em 4em;
 }
 
 #app .list-container h1{
@@ -37,8 +37,14 @@ body{
     cursor: pointer;
 }
 
+#app .list-container ul li .flex-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+
 #app .list-container ul li span.delete {
-    padding-left: .5em;
     cursor: pointer;
 }
 
@@ -53,7 +59,7 @@ body{
 }
 
 #app .list-container #add-todo input{
-    width: 160px;
+    width: 250px;
     border-radius: 5px;
     border: none;
     padding: .3em .8em;
