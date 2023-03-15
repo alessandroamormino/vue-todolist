@@ -17,7 +17,7 @@
             </li>
         </ul>
         <div id="add-todo">
-            <input type="text" v-model="newToDo.text">
+            <input type="text" v-model="newToDo.text" @keyup.enter="addToDo()">
             <button @click="addToDo()">Add</button>
         </div>
     </div>
