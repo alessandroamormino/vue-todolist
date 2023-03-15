@@ -25,6 +25,10 @@ createApp({
         color: 'red',
         textDecoration: 'line-through',
       },
+      newToDo: {
+        text: '',
+        done: false,
+      },
     }
   }, 
 
@@ -39,7 +43,12 @@ createApp({
 
     removeToDo(toDoIndex){
         this.todos.splice(toDoIndex, 1);
-    }
+    }, 
+
+    addToDo(){
+        this.todos.push(this.newToDo);
+        this.newToDo = {text:'', done: false};
+    },
   },
 
 }).mount('#app')

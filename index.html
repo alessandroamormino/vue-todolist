@@ -16,6 +16,10 @@
                 <span @click="removeToDo(index)">X</span>
             </li>
         </ul>
+        <div id="add-todo">
+            <input type="text" v-model="newToDo.text">
+            <button @click="addToDo()">Add</button>
+        </div>
     </div>
 
     <!-- script -->
